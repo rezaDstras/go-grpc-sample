@@ -1,4 +1,4 @@
-# go-grpc-sample
+# Go Grpc Sample
 
 
 
