@@ -1,0 +1,18 @@
+syntax = "proto3";
+package user_Grpc;
+option go_package = "/user_grpc";
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string family = 3;
+}
+
+message Request{
+  string name = 1;
+}
+//for create interface for client and server
+service UserService {
+   rpc GetUser(Request) returns (User) {}
+   rpc GetAllUsers(Request) returns (stream User) {}
+}
